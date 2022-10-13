@@ -1,5 +1,13 @@
 # Puppeteer-Performance-Analysis-for-Parallelization
-This repo will provide some scripts in order to compare **Puppeteer** performance when using a _single **Browser** instance and multiples **Pages**_ or _multiples **Browser** instances with a single **Page** each_ in parallelized setups. Along with some results from the performed tests.
+This repo will provide some scripts in order to evaluate **Puppeteer** performance in parallelized setups. 
+
+There are currently two parallelized approachs that will be compared : 
+- **S**ingle **B**rowser > **M**ultiples **P**ages (SBMP)
+- **M**ultiples **B**rowsers > **S**ingle **P**age (MBSP) 
+
+We will refer to them using **SBMP** for the 1st one and **MBSP** for the 2nd one.
+
+Along with some results from the performed tests.
 
 
 **Dependencies:** 
