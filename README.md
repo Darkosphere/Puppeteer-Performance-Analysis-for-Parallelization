@@ -7,7 +7,8 @@ There are currently two parallelized approachs that will be compared :
 
 We will refer to them using **SBMP** for the 1st one and **MBSP** for the 2nd one.
 
-Along with some results from the performed tests.
+In the Performed tests folder you will find informations about tests that have been performed along with their relative results (original and transformed).
+
 
 
 **Dependencies:** 
