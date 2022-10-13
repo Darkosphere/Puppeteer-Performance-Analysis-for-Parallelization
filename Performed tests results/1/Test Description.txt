@@ -1,0 +1,29 @@
+Description of test #1: 
+This test compare the following two approachs "Single Browser Multiples Pages" or "Multiples Browsers Single Page",
+by running both in a loop (one execution at a time) that will go through the defined concurrency plage. 
+
+Measured values on each test are the initialization time, all pages loading times (will be stored in an aray) and the closing time. 
+Those measurements of performance are placed in order to ignore some delays that have been added to avoid error during the test.
+So basically each method returns this array: [initTime<float>, loadingTimes[float, ...], closingTime<float>].
+
+Prior to the log of tests results in a file, this returned array will be turned into the following object:
+o = { 
+  type: 'string', // 'Single Browser > Multiple Tabs' || 'Multi Browsers > Single Tab'
+  parallelization: int,
+  initTime: float, // ms
+  loadingTimes: [float, ...], // ms
+  closingTime: float; // ms
+}
+
+
+Tested Concurrency plage: 2-20
+Amount of pages loadings by test: 2000
+url used to perform the test: 'https://www.google.com/'
+
+Description of the task to be runned concurrently on all Pages:
+We go to the specified url waiting for 'networkidle0' and measure that loading time,
+after that we wait 2s (to reduce spam) before resolving with the loading time of the page.
+
+System informations:
+CPU: Ryzen 5 5600X
+RAM: 16 GB
